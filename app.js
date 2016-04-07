@@ -23,27 +23,25 @@ $(document).ready(function() {
 
   $(document).on("click","h2", function() {
     $($(this))
-      .fadeTo(1000,0.25, function() {
-      $($(this))
         .animate({
+            "opacity": "0.25",
             "margin-left": "+=20px"},1000, function() {
                 $(".speech").fadeTo(1000,0.5)
-            });
     });
   });
 
   // **Bonus:** Make the style switcher work.
 
   $(document).on("click","#switcher-large", function() {
-    $(".speech").css("fontSize","20px");
+    $("body").css("fontSize","80%");
   });
 
   $(document).on("click","#switcher-small", function() {
-    $(".speech").css("fontSize","8px");
+    $("body").css("fontSize","50%");
   });
 
   $(document).on("click","#switcher-default", function() {
-    $(".speech").css("fontSize","12px");
+    $("body").css("fontSize","62.5%");
   });
 
   // **Challenge:** React to presses of the arrow keys by smoothly moving
